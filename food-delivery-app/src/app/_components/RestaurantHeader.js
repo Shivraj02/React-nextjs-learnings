@@ -1,7 +1,7 @@
 import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 
-const RestaurantHeader = () => {
+const RestaurantHeader = ({ setIsLogin }) => {
     return (
         <AppBar
             position="static"
@@ -66,6 +66,7 @@ const RestaurantHeader = () => {
                                 backgroundColor: "#f1f1f1"
                             }
                         }}
+                        onClick={() => setIsLogin(true)}
                     >
                         Login
                     </Button>

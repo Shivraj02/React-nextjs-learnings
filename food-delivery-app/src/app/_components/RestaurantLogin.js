@@ -2,10 +2,12 @@
 import React from 'react'
 import Button from '@mui/material/Button';
 import { Box, TextField, Typography, Paper } from '@mui/material';
+import { blue } from '@mui/material/colors';
+import Link from 'next/link';
+import RestaurantSignup from './RestaurantSignup';
 
-const RestaurantLogin = () => {
+const RestaurantLogin = ({ setIsLogin }) => {
     return (
-        // <>
         <Box
             sx={
                 {
@@ -39,9 +41,13 @@ const RestaurantLogin = () => {
                 <TextField label="Enter you email" type='email' variant='outlined' sx={{ width: 400, margin: "10px" }} />
                 <TextField label="Enter you password" type='password' variant='outlined' sx={{ width: 400, margin: "10px" }} />
                 <Button variant="contained" sx={{ height: 50, width: 400, margin: "10px" }}>Sign in</Button>
+                <Button
+                    onClick={() => setIsLogin(false)}
+                >
+                    Don't have account? Sign Up
+                </Button>
             </Paper>
         </Box>
-        // </>
     )
 }
 
